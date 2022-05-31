@@ -1,7 +1,6 @@
 package td_curse_with_gradle;
 
 import java.util.*;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Validator {
 
