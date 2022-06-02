@@ -1,4 +1,4 @@
-package first_task;
+package com.example.first_task.first_task;
 
 import java.util.*;
 
