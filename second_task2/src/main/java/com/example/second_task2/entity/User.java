@@ -1,4 +1,4 @@
-package com.example.second_task.entity;
+package com.example.second_task2.entity;
 
 
 import javax.persistence.*;
@@ -9,7 +9,7 @@ public class User {
 
     @Id
     @GeneratedValue
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "email")
