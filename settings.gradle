@@ -1,2 +1,4 @@
 rootProject.name = 'td_course_with_gradle'
+include 'first_task'
+include 'second_task'
 

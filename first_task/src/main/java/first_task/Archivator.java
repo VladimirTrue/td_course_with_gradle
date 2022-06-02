@@ -1,4 +1,4 @@
-package td_curse_with_gradle;
+package first_task;
 
 import java.util.List;
 import java.util.stream.Collectors;

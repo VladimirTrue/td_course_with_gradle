@@ -1,4 +1,4 @@
-package td_curse_with_gradle;
+package first_task;
 
 import java.util.*;
 
