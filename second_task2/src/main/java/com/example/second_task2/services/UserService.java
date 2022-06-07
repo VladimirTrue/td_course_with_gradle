@@ -10,4 +10,12 @@ public interface UserService {
 
     public List<User> findAll();
 
+    public User findUserById(Long id);
+
+    public void deleteUser(User user);
+
+    public void deleteUserByID(Long id);
+
+
+
 }

@@ -1,17 +1,15 @@
-package com.example.second_task2;
+package com.example.second_task2.controllers;
 
 import com.example.second_task2.entity.User;
 import com.example.second_task2.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/")
-public class Controller {
+public class UserController {
 
 
     @Autowired
