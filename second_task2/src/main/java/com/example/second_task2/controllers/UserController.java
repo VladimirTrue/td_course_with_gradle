@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/users")
 public class UserController {
 
 
@@ -20,17 +20,28 @@ public class UserController {
         return new String("HELLO!");
     }
 
-    @PostMapping("/users")
+    @PostMapping("/add_user")
     public User addNewUser(@RequestBody User user) {
-
         userService.save(user);
         return user;
     }
 
-    @GetMapping("/users")
-    public List<User> getAllusers() {
-        List<User> allusers = userService.findAll();
-        return allusers;
+    @GetMapping("/get_all_users")
+    public List<User> getAllUsers() {
+        List<User> allUsers = userService.findAll();
+        return allUsers;
+    }
+
+    @GetMapping("get_user/{id}")
+    public User getUserById(@PathVariable Long id) {
+        User user = userService.findUserById(id);
+        return user;
+    }
+
+    @PostMapping("delete_user/{id}")
+    public String deleteUserById(@PathVariable Long id){
+        userService.deleteUserByID(id);
+        return "User with id: " + id + " was deleted";
     }
 
 }
