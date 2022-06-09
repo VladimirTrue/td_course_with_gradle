@@ -15,33 +15,29 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/hello")
-    public String hello() {
-        return new String("HELLO!");
-    }
 
     @PostMapping("/add_user")
     public User addNewUser(@RequestBody User user) {
-        userService.save(user);
-        return user;
+        var userResponse = userService.saveUser(user);
+        return userResponse;
     }
 
     @GetMapping("/get_all_users")
     public List<User> getAllUsers() {
-        List<User> allUsers = userService.findAll();
+        var allUsers = userService.findAllUsers();
         return allUsers;
     }
 
-    @GetMapping("get_user/{id}")
+    @GetMapping("/get/{id}")
     public User getUserById(@PathVariable Long id) {
-        User user = userService.findUserById(id);
+        var user = userService.findUserById(id);
         return user;
     }
 
-    @PostMapping("delete_user/{id}")
+    @PostMapping("/delete_user/{id}")
     public String deleteUserById(@PathVariable Long id){
-        userService.deleteUserByID(id);
-        return "User with id: " + id + " was deleted";
+        var responseStr = userService.deleteUserByID(id);
+        return responseStr;
     }
 
 }

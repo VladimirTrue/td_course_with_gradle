@@ -1,41 +1,39 @@
 package com.example.second_task2.entity;
 
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
-@Table(name = "users")
+@Table(name = "products")
 @NoArgsConstructor
 @ToString
 @Setter
 @Getter
-public class User {
+public class Product {
 
     @Id
     @GeneratedValue
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "email")
-    private String email;
-
     @Column(name = "name")
     private String name;
 
-    @Column(name = "surname")
-    private String surname;
+    @Column(name = "cost")
+    private BigDecimal cost;
 
+    @Column(name = "description")
+    private String description;
 
-    public User(Long id, String email, String name, String surname) {
-        this.id = id;
-        this.email = email;
+    public Product(String name, BigDecimal cost, String description) {
         this.name = name;
-        this.surname = surname;
+        this.cost = cost;
+        this.description = description;
     }
 
 }
