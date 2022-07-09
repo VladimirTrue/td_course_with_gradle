@@ -26,6 +26,9 @@ public class RepositoryConfiguration implements RepositoryRestConfigurer {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
         RepositoryRestConfigurer.super.configureRepositoryRestConfiguration(config, cors);
-        config.exposeIdsFor(User.class, Product.class);
+        config
+                .exposeIdsFor(User.class, Product.class)
+
+                .setBasePath("/api");
     }
 }
