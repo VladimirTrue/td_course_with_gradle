@@ -11,7 +11,6 @@
 first_task/.gradle/*
 first_task/.idea/*
 first_task/gradle/*
-first_task/src/test/*
 first_task/build/*
 second_task/.gradle/*
 second_task/.idea/*

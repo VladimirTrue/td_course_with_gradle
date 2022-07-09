@@ -5,16 +5,7 @@ import java.util.stream.Collectors;
 
 public class Archivator {
 
-    public static void main(String[] args) {
-        System.out.println(doArchiveStr("AAABBcCssssSAA"));
-        System.out.println(doArchiveStr("A"));
-        System.out.println(doArchiveStr("DDD"));
-        System.out.println(doArchiveStr("AADDDdd"));
-        System.out.println(doArchiveStr("214141SS"));
-        System.out.println(doArchiveStr(" "));
-    }
-
-    public static String doArchiveStr(String str) {
+    public String doArchiveStr(String str) {
         if (str.isEmpty()) {
             return "Недопустимое значение: Введенная строка пустая";
         }
