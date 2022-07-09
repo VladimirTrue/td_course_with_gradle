@@ -3,19 +3,7 @@ package com.example.first_task.first_task;
 import java.util.*;
 
 public class Validator {
-
-    public static void main(String[] args) {
-
-        System.out.println(isClosedQuotes("}{"));
-        System.out.println(isClosedQuotes("({))"));
-        System.out.println(isClosedQuotes("()()"));
-        System.out.println(isClosedQuotes("()"));
-        System.out.println(isClosedQuotes("(()"));
-        System.out.println(isClosedQuotes("(({}([)]))"));
-        System.out.println(isClosedQuotes("(({}[()]))"));
-    }
-
-    public static boolean isClosedQuotes(String str) {
+    public boolean isClosedQuotes(String str) {
         if (str == null) return false;
 
         Map<Character, Character> quoteMap = new HashMap<>();
